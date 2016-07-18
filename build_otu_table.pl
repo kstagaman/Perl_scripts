@@ -5,7 +5,7 @@ use Getopt::Long;
 
 # use this script to generate an OTU table from a UCLUST .uc output file
 
-my $usage = "\n\tusage: build_otu_table.pl [ -h -o <output PATH> -f <uclust/uparse>] -i <UC file> -m <map TXT>\n\n";
+my $usage = "\n\tusage: build_otu_table.pl [-h -o <output PATH> -f <uclust/uparse>] -i <UC file> -m <map TXT>\n\n";
 
 # defaults
 my $help;
@@ -24,7 +24,7 @@ GetOptions (
 
 if ($outDir !~ /\/$/) {$outDir = "$outDir\/"}
 die unless $help or ($inFile and $mapFile);
-die "\n\t-t option must be either 'uclust' or 'uparse'\n\n" unless ($format eq 'uclust' or $format eq 'uparse');
+die "\n\t-f option must be either 'uclust' or 'uparse'\n\n" unless ($format eq 'uclust' or $format eq 'uparse');
 
 if ($help) {
 	help_txt();

@@ -13,7 +13,7 @@ open INF, $infile or die "\n\t$infile cannot be opened\n\n";
 while (<INF>) {
 	if ($_ =~ /^\[FLASH\]/) {
 		if ($_ =~ /-R1.fastq/) {
-			my ($smpl) = /(\w+)-R1.fastq/;
+			my ($smpl) = /(\S+)-R1.fastq/;
 			print "$smpl\t";
 		}
 

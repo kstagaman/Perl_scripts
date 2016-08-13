@@ -86,7 +86,7 @@ else {
 				}
 
 				else {
-					if ($_ =~ /^\@HWI-/) {
+					if ($_ =~ /^\@[HK][W0][I0]/) {
 						my $seq = <INF>;
 						chomp $seq;
 						my $seqLength = length $seq;

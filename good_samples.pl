@@ -30,7 +30,7 @@ else {
 	my ($outname) = $inFile =~ /(\w+)\.txt/;
 	my $outFile = "${outDir}${outname}_goodSamples.txt";
 	open INF, "<$inFile" or die "\n\tError: cannot open $inFile\n\n";
-	open OUT, "<$outFile" or die "\n\tError: cannot create $outFile\n\n";
+	open OUT, ">$outFile" or die "\n\tError: cannot create $outFile\n\n";
 	my $sampleFile;
 
 	while(<INF>) {

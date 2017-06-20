@@ -4,7 +4,7 @@ use strict; use warnings;
 use Getopt::Long;
 
 # use this script to add numbers to ID lines in a fasta file. Option -s allows you to specify the separator, default is '|'.
-my $usage = "\n\tUsage: add_nos2fasta.pl [-h -s -o] -i\n\n";
+my $usage = "\n\tUsage: add_nos2fasta.pl [-h -s -o] -i <input file>\n\n";
 
 my $help;
 my $sep = '|';

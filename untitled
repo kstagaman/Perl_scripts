@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+# remove_primers.pl
+use strict; use warnings;
+use Getopt::Long; use String::Approx 'amatch';
+
+# Use this script to remove primers (and any unwanted preceding/trailing nts) from *joined* paired-end reads
+# This script requires FASTA input
+
+my $usage = "\n\tremove_primers.pl [-h -o <output PATH>] -b <barcodes TXT> -i <input FASTA>\n\n";
